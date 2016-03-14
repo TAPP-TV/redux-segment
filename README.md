@@ -5,6 +5,10 @@ redux-keen
 
 [Redux](http://rackt.github.io/redux) middleware for sending analytics to [Keen IO](https://keen.io/).
 
+## Forward
+
+I highly encourage you to enable Issues to facilitate conversation on this repo, the title of which is a misnomer as Rangle has created a Redux middleware for integrating Redux with Segment analytics.
+
 ## Installation
 
 ```js
