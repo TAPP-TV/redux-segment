@@ -1,4 +1,4 @@
-redux-segment
+redux-segmentio
 ==========
 
 [Redux](http://rackt.github.io/redux) middleware for sending analytics to [Segment.io](https://segment.io/).
@@ -6,7 +6,7 @@ redux-segment
 ## Usage
 
 ```js
-import segmentAnalytics from 'redux-segment';
+import segmentAnalytics from 'redux-segmentio';
 
 // load analytics.js, globally unfortunately
 analytics.load("YOUR_WRITE_KEY");
@@ -40,7 +40,6 @@ The optional `event` property inside the `analytics` contains the data of the Ke
 ```js
 {
   type: ADD_TO_SHOPPING_CART,
-  payload: item,
   meta: {
     analytics: {
       collection: "add_item_to_shopping_cart"
@@ -53,7 +52,6 @@ The optional `event` property inside the `analytics` contains the data of the Ke
 ```js
 {
   type: ADD_TO_SHOPPING_CART,
-  payload: item,
   meta: {
     analytics: {
       collection: "add_item_to_shopping_cart",

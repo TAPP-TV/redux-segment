@@ -1,5 +1,5 @@
 {
-  "name": "redux-segment",
+  "name": "redux-segmentio",
   "version": "0.1.0",
   "description": "Redux middleware for sending analytics to Segment",
   "main": "lib/index.js",
