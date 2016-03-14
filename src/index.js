@@ -1,6 +1,6 @@
-export default function keenAnalytics(keenClient, getGlobals) {
-  if (!keenClient || !keenClient.addEvent) {
-    throw new TypeError('You must provide a keen-js client instance.');
+export default function segmentAnalytics(segmentClient, getGlobals) {
+  if (!segmentClient || !segmentClient.trackByJS) {
+    throw new TypeError('You must provide a segment-js client instance.');
   }
 
   let globals = {};
@@ -11,15 +11,20 @@ export default function keenAnalytics(keenClient, getGlobals) {
     }
 
     try {
+      const {collection, event} = action.meta.analytics;
+
       if (typeof getGlobals === 'function') {
-        globals = getGlobals(store.getState());
+        globals = getGlobals(store.getState(), event);
       }
 
-      const { collection, event } = action.meta.analytics;
-      keenClient.addEvent(collection, { ...globals, ...event });
-    }
-    catch (error) {
-      console.error(error);
+      segmentClient.trackByJS(collection, {
+        ...globals, ...event
+      });
+      if (action.meta.analytics.page) {
+        segmentClient.trackPage(action.meta.analytics.page);
+      }
+    } catch (error) {
+      console.error('error', error);
     }
     return next(action);
   };

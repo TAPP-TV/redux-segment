@@ -1,7 +1,7 @@
 {
-  "name": "redux-keen",
-  "version": "0.2.0",
-  "description": "Redux middleware for sending analytics to Keen.",
+  "name": "redux-segment",
+  "version": "0.1.0",
+  "description": "Redux middleware for sending analytics to Segment",
   "main": "lib/index.js",
   "scripts": {
     "build": "rm -rf lib/ && ./node_modules/.bin/babel -d lib/ src/",
@@ -10,17 +10,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pavelvolek/redux-keen.git"
+    "url": "https://github.com/TAPP-TV/redux-segment.git"
   },
-  "homepage": "https://github.com/pavelvolek/redux-keen",
+  "homepage": "https://github.com/TAPP-TV/redux-segment",
   "keywords": [
     "redux",
     "middleware",
     "redux-middleware",
-    "keen",
+    "segment",
     "analytics"
   ],
-  "author": "Pavel Volek <me@pavelvolek.cz>",
+  "author": "Tapp TV <tech@tapptv.com>",
   "license": "MIT",
   "devDependencies": {
     "babel": "^5.8.23",
